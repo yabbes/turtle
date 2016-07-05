@@ -1,6 +1,7 @@
 #! /usr/bin/env python3
 
 import turtle
+import random
 
 class Kroete(turtle.Turtle):
     def __init__(self, x, y, color):
@@ -21,13 +22,20 @@ def main():
 
     troop = list()
     colors = ["red", "blue", "yellow", "black"]
-    for i in range(4):
-       kr = Kroete(20+(20+i*2), 3+i*10, colors[i])
+    for i in range(8):
+       kr = Kroete(20+(20+i*2), 3+i*10, colors[random.randint(0,3)])
        troop.append(kr)
 
     for k in troop:
         k.simpleMove(90, 60)
         k.circle(100)
+        k.left(80)
+        k.forward(200)
+        k.circle(200)
+        k.left(50)
+        k.forward(80)
+        k.circle(60)
+
 
     wn.exitonclick()
 
