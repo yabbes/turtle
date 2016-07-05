@@ -1,8 +1,9 @@
 #! /usr/bin/env python3
 import turtle
 
-########olympic rings...###
-
+"""olympic rings...
+http://www.blog.pythonlibrary.org/2012/08/06/python-using-turtles-for-drawing/###
+"""
 class OlyTurtle(turtle.Turtle):
 
     def __init__(self):
