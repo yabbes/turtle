@@ -7,7 +7,8 @@ class Kroete(turtle.Turtle):
         turtle.Turtle.__init__(self)
         self.setx = x
         self.sety = y
-        self.pencolor = color
+        self.setpos(x,y)
+        self.color(color)
 
     def simpleMove(self, length, angle):
         self.forward(length)
