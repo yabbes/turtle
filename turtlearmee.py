@@ -5,10 +5,9 @@ import turtle
 class Kroete(turtle.Turtle):
     def __init__(self, x, y, color):
         turtle.Turtle.__init__(self)
-        self.setx = x
-        self.sety = y
-        self.setpos(x,y)
+        self.setposition(x,y)
         self.color(color)
+        self.pensize(5)
 
     def simpleMove(self, length, angle):
         self.forward(length)
@@ -23,11 +22,12 @@ def main():
     troop = list()
     colors = ["red", "blue", "yellow", "black"]
     for i in range(4):
-       kr = Kroete(20+(20+i*2), 3, colors[i])
+       kr = Kroete(20+(20+i*2), 3+i*10, colors[i])
        troop.append(kr)
 
     for k in troop:
         k.simpleMove(90, 60)
+        k.circle(100)
 
     wn.exitonclick()
 
